@@ -1,6 +1,6 @@
 Vim Clojure Conceal
 ===================
-Based on fwolanski/vim-clojure-conceal
+Based on [fwolanski/vim-clojure-conceal](https://github.com/fwolanski/vim-clojure-conceal)
 
 Replacing g:clojure_conceal_extras by adding g:clojure_concealwords. Should be a space seperated list of words that should be replaced by unicode lambda's:
 
