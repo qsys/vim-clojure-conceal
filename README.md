@@ -30,7 +30,12 @@ This option is not set by default. Set it to `1` to enable it.
 
 ### `g:clojure_concealwords`
 
-Giving a space separated list of words to be replaces. (Defaults are given above.)
+Giving a space separated list of words to be replaces. For example:
+``` 
+g:clojure_concealwords="def defn- fn letfn #"
+```
+
+... which is the default.
 
 Installation
 ============
