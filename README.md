@@ -42,6 +42,6 @@ in the usual way.
 License
 =======
 
-Copyright (c) Filip Wolanski. Distributed under the same terms as Vim itself.
+Copyright (c) Kurt Sys. Distributed under the same terms as Vim itself.
 See `:help license`.
 
