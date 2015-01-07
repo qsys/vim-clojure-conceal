@@ -1,6 +1,7 @@
 " File:         clojure.vim (conceal enhancement)
 " Author:       Filip Wolanski <wolanski@gmail.com>
-" Last Change:  2013-03-05
+"               Kurt Sys <kurt.sys@gmail.com>
+" Last Change:  2015-01-07
 " Version:      1.0.0
 " Require:
 "   set nocompatible
@@ -10,14 +11,18 @@
 "
 
 if !has('conceal') || &enc != 'utf-8'
-  finish
+   finish
+endif
+
+if !exists('g:clojure_concealwords')
+   let g:clojure_concealwords="def defn- fn letfn #"
 endif
 
 if !exists('g:clojure_conceal_extras')
-  syntax keyword clojureConcealLambda defn conceal cchar=λ
+   syntax keyword clojureConcealLambda defn conceal cchar=λ
 else
-  syntax keyword clojureConcealLambda defn defn- fn letfn conceal cchar=λ
-  syntax match clojureConcealLambda /\v#\(/me=e-1 conceal cchar=λ
+   exec 'syntax keyword clojureConcealLambda ' . g:clojure_concealwords . ' conceal cchar=λ'
+   syntax match clojureConcealLambda /\v#\(/me=e-1 conceal cchar=λ
 endif
 
 hi link clojureConcealLambda Define
