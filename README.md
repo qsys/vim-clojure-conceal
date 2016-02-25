@@ -1,10 +1,12 @@
-Vim Clojure Conceal
-===================
-Based on [fwolanski/vim-clojure-conceal](https://github.com/fwolanski/vim-clojure-conceal)
+Vim Cloceal
+===========
+Based on [fwolanski/vim-clojure-conceal](https://github.com/fwolanski/vim-clojure-conceal) and some forks of this projects.
 
-Replacing g:clojure_conceal_extras by adding g:clojure_concealwords. Should be a space seperated list of words that should be replaced by unicode lambda's:
+Conceals clojure keywords in vim. To change the symbols and/or keywords, there are a few options:
 
-By default, the plugin conceals all `defn` statements.
+* Fork this project and simply change after/syntax/clojure.vim... and probably make a pull request
+* Put in an issue what you'd like to have changed/optional.
+
 For example:
 
 ```clojure
@@ -15,38 +17,52 @@ For example:
 becomes:
 
 ```clojure
-(λ square [x]
+(⨍ square [x]
   (* x x))
 ```
-
 It requires at least Vim 7.3 and a unicode font.
 
-### `g:clojure_conceal_extras`
+Conceals
+--------
 
-Enabling this option changes `fn`, `defn-`, `letfn`, and `#()` to the
-Unicode lambda symbol as well.
+fn letfn #(   λ
+defn defn-    ⨍
+partial       ℘
+def           ≡ 
+let           ┝ 
+#{            ∈
+and           ∧
+or            ∨ 
+not           ¬
+comp          ∘
+doseq         ∀
+recur         ┅
+->            ›
+->>           »
+when          ◊
+if            ◇
 
-This option is not set by default. Set it to `1` to enable it.
-
-### `g:clojure_concealwords`
-
-Giving a space separated list of words to be replaces. For example:
-``` 
-g:clojure_concealwords="def defn- fn letfn #"
-```
-
-... which is the default.
 
 Installation
-============
+------------
 
 Drop clojure.vim to `~/.vim/after/syntax` (Linux/Mac OS X/BSD) or
 `~/vimfiles/after/syntax` folder (Windows). Or install with pathogen or vundle
 in the usual way.
 
 License
-=======
+-------
 
-Copyright (c) Kurt Sys. Distributed under the same terms as Vim itself.
-See `:help license`.
+BSD, short and sweet.
 
+Credit
+------
+
+Original version by [Filip Wolanski][1]
+
+Additions from forks: [Honza Pokorny][2] [Justin Holguin][3] [Jeb Beich][4]
+
+[1]: https://github.com/fwolanski/vim-clojure-conceal
+[2]: https://github.com/honza
+[3]: https://github.com/holguinj
+[4]: https://github.com/jebberjeb
