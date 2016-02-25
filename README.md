@@ -25,22 +25,24 @@ It requires at least Vim 7.3 and a unicode font.
 Conceals
 --------
 
-fn letfn #(   λ
-defn defn-    ⨍
-partial       ℘
-def           ≡ 
-let           ┝ 
-#{            ∈
-and           ∧
-or            ∨ 
-not           ¬
-comp          ∘
-doseq         ∀
-recur         ┅
-->            ›
-->>           »
-when          ◊
-if            ◇
+| keyword/match | symbol |
+| --- | --- |
+| fn letfn \#( | λ |
+| defn defn-  | ⨍ |
+| partial     | ℘ |
+| def         | ≡ |
+| let         | ┝ |
+| \#{         | ∈ |
+| and         | ∧ |
+| or          | ∨ |
+| not         | ¬ |
+| comp        | ∘ |
+| doseq       | ∀ |
+| recur       | ┅ |
+| ->          | › |
+| ->>         | » |
+| when        | ◊ |
+| if          | ◇ |
 
 
 Installation
